@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'trebuchetms';
+  src: url('./fonts/trebuchetms.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: url('./fonts/Verdana.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Verdana-Italic';
+  src: url('./fonts/Verdana-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
 $baseGreen: #424f4c;
 $width1: 320px;
 $width2: 216px;
@@ -12,6 +33,7 @@ $width2: 216px;
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Verdana';
   font-size: 14px;
 }
 
@@ -24,13 +46,18 @@ body {
   justify-content: center;
 }
 
+.logo {
+  width: 680px;
+}
+
 .page {
   width: 100%;
   max-width: 680px;
-  //   display: flex;
-  //   flex-flow: column nowrap;
-  //   align-items: center;
-  //   justify-content: start;
+  margin-top: 64px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: start;
 }
 
 .default_header {
@@ -39,6 +66,7 @@ body {
 
   h4 {
     width: $width2;
+    font-family: 'trebuchetms';
     font-size: 14px;
     margin: 0;
     display: flex;
@@ -47,12 +75,14 @@ body {
 
     .mili {
       color: grey;
+      font-family: 'Verdana-Italic';
     }
   }
 
   h2 {
     width: 100%;
     text-align: start;
+    font-family: 'trebuchetms';
     font-size: 16px;
     margin: 0;
   }
@@ -65,6 +95,7 @@ body {
 
   h3 {
     width: $width1;
+    font-family: 'trebuchetms';
     font-size: 14px;
     margin: 0;
   }
@@ -80,6 +111,7 @@ body {
 .extra-text {
   width: 100%;
   text-align: end;
+  font-family: 'Verdana-Italic';
 }
 
 .block_wrapper {
@@ -124,6 +156,7 @@ body {
   p {
     margin-top: 4px;
     color: grey;
+    font-family: 'Verdana-Italic';
   }
 }
 
@@ -144,7 +177,33 @@ body {
   width: 450px;
 }
 
+.kitchen_header {
+  width: 100%;
+
+  text-align: center;
+
+  h2 {
+    font-family: 'trebuchetms';
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  div {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  span {
+    font-family: 'Verdana-Italic';
+    color: grey;
+  }
+}
+
 @media (max-width: 660px) {
+  .logo {
+    width: 320px;
+  }
   .block_wrapper {
     justify-content: center;
   }
@@ -153,7 +212,7 @@ body {
     flex-flow: column-reverse nowrap;
 
     img {
-        margin-bottom: 32px;
+      margin-bottom: 32px;
     }
   }
 
